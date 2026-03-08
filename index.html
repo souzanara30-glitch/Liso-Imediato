@@ -9,135 +9,49 @@
             --roxo-escuro: #4b0082;
             --roxo-medio: #6a0dad;
             --lilas: #e6e6fa;
-            --dourado: #ffd700;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--lilas);
-            color: #333;
-            line-height: 1.6;
-        }
-        .header-aviso {
-            background: var(--roxo-escuro);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-        .hero {
-            background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(106, 13, 173, 0.7)), url('COLOQUE_AQUI_O_NOME_DA_FOTO_DA_MODELO.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .hero h1 { font-size: 2.5em; margin-bottom: 10px; text-transform: uppercase; }
-        .hero p { font-size: 1.2em; font-style: italic; }
-        
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        
-        .oferta-box {
-            background: white;
-            border: 3px solid var(--roxo-medio);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            margin-top: -40px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .pagamento-entrega {
-            color: #d9534f;
-            font-weight: bold;
-            font-size: 1.3em;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .beneficios { background: white; padding: 30px; border-radius: 15px; margin: 20px 0; }
-        .beneficios h2 { color: var(--roxo-medio); text-align: center; }
-        
-        .antes-depois {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .antes-depois img { width: 100%; border-radius: 8px; border: 2px solid var(--roxo-medio); }
-
-        .btn-compra {
-            display: block;
-            background: #28a745;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            text-decoration: none;
-            font-size: 1.5em;
-            font-weight: bold;
-            border-radius: 50px;
-            margin: 30px 0;
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
-            transition: transform 0.2s;
-        }
-        .btn-compra:hover { transform: scale(1.05); }
-
-        .social-buttons { text-align: center; margin-top: 40px; }
-        .social-buttons a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: white;
-            text-decoration: none;
-        }
-        .instagram { background: #e1306c; }
-        .facebook { background: #4267b2; }
+        body { font-family: sans-serif; margin: 0; background-color: var(--lilas); color: #333; text-align: center; }
+        .aviso { background: var(--roxo-escuro); color: white; padding: 10px; font-weight: bold; }
+        .hero { padding: 40px 20px; background: white; }
+        .hero h1 { color: var(--roxo-medio); margin-bottom: 5px; }
+        .main-img { width: 100%; max-width: 500px; border-radius: 15px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .oferta { background: white; padding: 20px; border: 2px solid var(--roxo-medio); border-radius: 15px; margin: 20px; }
+        .pagamento-entrega { color: #d9534f; font-size: 1.4em; font-weight: bold; display: block; }
+        .btn-compra { display: block; background: #28a745; color: white; padding: 20px; text-decoration: none; font-size: 1.5em; font-weight: bold; border-radius: 50px; margin: 20px; }
+        .antes-depois { display: flex; gap: 10px; justify-content: center; padding: 20px; }
+        .antes-depois img { width: 45%; border-radius: 10px; border: 2px solid var(--roxo-medio); }
+        .footer { padding: 20px; }
+        .social { display: inline-block; padding: 10px 20px; color: white; text-decoration: none; border-radius: 5px; margin: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="header-aviso">
-        🔥 ÚLTIMAS UNIDADES COM ESCOVA ALISADORA INCLUSA!
-    </div>
+    <div class="aviso">🔥 ÚLTIMAS UNIDADES COM ESCOVA ALISADORA INCLUSA!</div>
 
     <section class="hero">
         <h1>Cabelo com brilho e sedoso!</h1>
         <p>Resultado de salão em casa!</p>
+        <img src="WhatsApp Image 2026-03-06 at 13.20.00.jpeg" class="main-img" alt="Kit Liso Mágico">
     </section>
 
-    <div class="container">
-        <div class="oferta-box">
-            <span class="pagamento-entrega">⭐ PAGUE SOMENTE NA ENTREGA! ⭐</span>
-            <p>Também aceitamos Pix e Cartão de Crédito.</p>
-            <h2 style="color: var(--roxo-escuro); margin: 10px 0;">Apenas R$ 149,90</h2>
-            <a href="https://app.coinzz.com.br/checkout/kitliso-magico-0" class="btn-compra">COMPRAR AGORA</a>
-            <p><small>*A escova alisadora vai junto com o kit!</small></p>
-        </div>
+    <div class="oferta">
+        <span class="pagamento-entrega">⭐ PAGUE SOMENTE NA ENTREGA! ⭐</span>
+        <p>Também aceitamos Pix e Cartão de Crédito.</p>
+        <h2 style="font-size: 2em;">Apenas R$ 149,90</h2>
+        <a href="https://app.coinzz.com.br/checkout/kitliso-magico-0" class="btn-compra">COMPRAR AGORA</a>
+    </div>
 
-        <div class="beneficios">
-            <h2>Por que o Kit Liso Imediato é para você?</h2>
-            <p>O Kit Liso Imediato foi desenvolvido para proporcionar limpeza suave, hidratação profunda, alinhamento dos fios e redução do frizz, deixando os cabelos mais macios e brilhantes desde a primeira aplicação.</p>
-            <ul>
-                <li>Redução de volume e frizz</li>
-                <li>Enriquecido com Queratina e D-Pantenol</li>
-                <li>Vitamina A, C e Ômegas 6, 7 e 9</li>
-                <li>Fios alinhados e proteção da cor</li>
-            </ul>
-        </div>
-
-        <h2 style="text-align: center; color: var(--roxo-medio);">Resultados Reais</h2>
+    <div style="padding: 20px; background: white;">
+        <h3>Resultados Reais</h3>
         <div class="antes-depois">
-            <img src="COLOQUE_NOME_FOTO_ANTES.jpg" alt="Antes">
-            <img src="COLOQUE_NOME_FOTO_DEPOIS.jpg" alt="Depois">
+            <img src="WhatsApp Image 2026-03-06 at 13.20.01.jpeg" alt="Antes e Depois">
+            <img src="WhatsApp Image 2026-03-06 at 13.20.02.jpeg" alt="Resultado">
         </div>
+    </div>
 
-        <div class="social-buttons">
-            <a href="https://www.instagram.com/kitlisoimediato?igsh=MXRxMGZkeWxkZGY1Ng==" class="instagram">Siga no Instagram</a>
-            <a href="https://www.facebook.com/share/1CGCVkDHEs/" class="facebook">Página no Facebook</a>
-        </div>
+    <div class="footer">
+        <a href="https://www.instagram.com/kitlisoimediato?igsh=MXRxMGZkeWxkZGY1Ng==" class="social" style="background: #e1306c;">Instagram</a>
+        <a href="https://www.facebook.com/share/1CGCVkDHEs/" class="social" style="background: #4267b2;">Facebook</a>
     </div>
 
 </body>
