@@ -1,324 +1,144 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Liso Mágico | Resultado de Salão em Casa</title>
+    <style>
+        :root {
+            --roxo-escuro: #4b0082;
+            --roxo-medio: #6a0dad;
+            --lilas: #e6e6fa;
+            --dourado: #ffd700;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--lilas);
+            color: #333;
+            line-height: 1.6;
+        }
+        .header-aviso {
+            background: var(--roxo-escuro);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .hero {
+            background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(106, 13, 173, 0.7)), url('COLOQUE_AQUI_O_NOME_DA_FOTO_DA_MODELO.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 { font-size: 2.5em; margin-bottom: 10px; text-transform: uppercase; }
+        .hero p { font-size: 1.2em; font-style: italic; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        
+        .oferta-box {
+            background: white;
+            border: 3px solid var(--roxo-medio);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-top: -40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .pagamento-entrega {
+            color: #d9534f;
+            font-weight: bold;
+            font-size: 1.3em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .beneficios { background: white; padding: 30px; border-radius: 15px; margin: 20px 0; }
+        .beneficios h2 { color: var(--roxo-medio); text-align: center; }
+        
+        .antes-depois {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .antes-depois img { width: 100%; border-radius: 8px; border: 2px solid var(--roxo-medio); }
 
-<title>Kit Liso Mágico</title>
+        .btn-compra {
+            display: block;
+            background: #28a745;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 50px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+            transition: transform 0.2s;
+        }
+        .btn-compra:hover { transform: scale(1.05); }
 
-<style>
-
-body{
-font-family: 'Segoe UI', sans-serif;
-margin:0;
-background:#faf7ff;
-color:#333;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
-}
-
-header{
-background:linear-gradient(135deg,#7b2cbf,#c77dff);
-color:white;
-text-align:center;
-padding:40px 20px;
-}
-
-header h1{
-font-size:34px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:20px;
-}
-
-.hero-img{
-width:100%;
-max-width:420px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-margin-top:20px;
-}
-
-.urgency{
-background:#ffd6ff;
-color:#5a189a;
-padding:12px;
-border-radius:8px;
-font-weight:bold;
-margin-top:20px;
-display:inline-block;
-}
-
-.highlight{
-background:white;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-border-radius:10px;
-text-align:center;
-padding:20px;
-margin:40px auto;
-font-size:20px;
-font-weight:bold;
-color:#7b2cbf;
-}
-
-.section{
-padding:40px 20px;
-}
-
-.section h2{
-text-align:center;
-color:#7b2cbf;
-margin-bottom:20px;
-}
-
-.benefits{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-text-align:center;
-}
-
-.benefit{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-}
-
-.before-after{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-}
-
-.before-after img{
-width:300px;
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.testimonial{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
-.stars{
-color:gold;
-font-size:18px;
-}
-
-.price{
-text-align:center;
-margin-top:30px;
-}
-
-.old-price{
-text-decoration:line-through;
-color:#999;
-font-size:20px;
-}
-
-.new-price{
-font-size:36px;
-color:#7b2cbf;
-font-weight:bold;
-}
-
-.cta{
-display:block;
-background:#7b2cbf;
-color:white;
-text-decoration:none;
-padding:18px;
-border-radius:10px;
-font-size:20px;
-margin:20px auto;
-width:300px;
-text-align:center;
-font-weight:bold;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
-}
-
-.cta:hover{
-background:#5a189a;
-}
-
-.free{
-text-align:center;
-color:#5a189a;
-font-weight:bold;
-}
-
-footer{
-background:#2b0a3d;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-.social a{
-display:inline-block;
-margin:10px;
-padding:10px 20px;
-background:#7b2cbf;
-color:white;
-border-radius:6px;
-text-decoration:none;
-}
-
-</style>
-
+        .social-buttons { text-align: center; margin-top: 40px; }
+        .social-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+        }
+        .instagram { background: #e1306c; }
+        .facebook { background: #4267b2; }
+    </style>
 </head>
-
 <body>
 
-<header>
+    <div class="header-aviso">
+        🔥 ÚLTIMAS UNIDADES COM ESCOVA ALISADORA INCLUSA!
+    </div>
 
-<h1>O SEGREDO DAS CELEBRIDADES PARA UM LISO PERFEITO EM MINUTOS!</h1>
+    <section class="hero">
+        <h1>Cabelo com brilho e sedoso!</h1>
+        <p>Resultado de salão em casa!</p>
+    </section>
 
-<p>Cabelo com brilho e sedoso! Resultado de salão em casa!</p>
+    <div class="container">
+        <div class="oferta-box">
+            <span class="pagamento-entrega">⭐ PAGUE SOMENTE NA ENTREGA! ⭐</span>
+            <p>Também aceitamos Pix e Cartão de Crédito.</p>
+            <h2 style="color: var(--roxo-escuro); margin: 10px 0;">Apenas R$ 149,90</h2>
+            <a href="https://app.coinzz.com.br/checkout/kitliso-magico-0" class="btn-compra">COMPRAR AGORA</a>
+            <p><small>*A escova alisadora vai junto com o kit!</small></p>
+        </div>
 
-<img src="modelo.jpg" class="hero-img">
+        <div class="beneficios">
+            <h2>Por que o Kit Liso Imediato é para você?</h2>
+            <p>O Kit Liso Imediato foi desenvolvido para proporcionar limpeza suave, hidratação profunda, alinhamento dos fios e redução do frizz, deixando os cabelos mais macios e brilhantes desde a primeira aplicação.</p>
+            <ul>
+                <li>Redução de volume e frizz</li>
+                <li>Enriquecido com Queratina e D-Pantenol</li>
+                <li>Vitamina A, C e Ômegas 6, 7 e 9</li>
+                <li>Fios alinhados e proteção da cor</li>
+            </ul>
+        </div>
 
-<div class="urgency">
-Oferta exclusiva: Kit + Escova Alisadora inclusa (Últimas unidades)!
-</div>
+        <h2 style="text-align: center; color: var(--roxo-medio);">Resultados Reais</h2>
+        <div class="antes-depois">
+            <img src="COLOQUE_NOME_FOTO_ANTES.jpg" alt="Antes">
+            <img src="COLOQUE_NOME_FOTO_DEPOIS.jpg" alt="Depois">
+        </div>
 
-</header>
-
-<div class="container">
-
-<div class="highlight">
-⭐ PAGUE SOMENTE NO ATO DA ENTREGA! ⭐ <br>
-Aceitamos também Pix e Cartão de Crédito
-</div>
-
-<section class="section">
-
-<h2>Benefícios do Kit Liso Mágico</h2>
-
-<div class="benefits">
-
-<div class="benefit">✨ Redução de volume</div>
-
-<div class="benefit">✨ Diminuição do frizz</div>
-
-<div class="benefit">✨ Brilho espelhado</div>
-
-<div class="benefit">✨ Proteção da cor</div>
-
-<div class="benefit">✨ Hidratação intensa</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Descrição do Produto</h2>
-
-<p style="text-align:center; max-width:700px; margin:auto;">
-O Kit Liso Imediato foi desenvolvido para proporcionar limpeza suave, hidratação profunda,
-alinhamento dos fios e redução do frizz, promovendo um efeito liso elegante, sedoso e com brilho
-intenso desde a primeira aplicação.
-</p>
-
-<p style="text-align:center; max-width:700px; margin:auto;">
-Sua fórmula exclusiva é enriquecida com:
-<strong>Aminoácidos, Queratina, D-Pantenol, Vitaminas A, C e Ômegas 6, 7 e 9</strong>,
-ingredientes essenciais que nutrem profundamente os fios e restauram a saúde do cabelo.
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>Resultados Reais</h2>
-
-<div class="before-after">
-
-<img src="antes.jpg">
-
-<img src="depois.jpg">
-
-<img src="escova.jpg">
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>O que nossas clientes dizem</h2>
-
-<div class="testimonials">
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"Meu cabelo ficou liso na primeira aplicação! Nunca vi um resultado tão rápido."</p>
-<strong>— Mariana S.</strong>
-</div>
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"Além de maravilhoso, poder pagar na entrega me deu muita segurança."</p>
-<strong>— Fernanda R.</strong>
-</div>
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"O brilho é surreal! Parece que acabei de sair do salão."</p>
-<strong>— Juliana M.</strong>
-</div>
-
-</div>
-
-</section>
-
-<section class="section price">
-
-<p class="old-price">De R$ 297,00</p>
-
-<p class="new-price">por apenas R$ 149,90</p>
-
-<p class="free">Escova Alisadora incluída GRÁTIS neste kit!</p>
-
-<a href="https://app.coinzz.com.br/checkout/kitliso-magico-0" class="cta">
-QUERO MEU KIT AGORA (Pagar na Entrega)
-</a>
-
-</section>
-
-</div>
-
-<footer>
-
-<p>Siga nossas redes sociais</p>
-
-<div class="social">
-
-<a href="https://www.instagram.com/kitlisoimediato?igsh=MXRxMGZkeWxkZGY1Ng==">Instagram</a>
-
-<a href="https://www.facebook.com/share/1CGCVkDHEs/">Facebook</a>
-
-</div>
-
-</footer>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/kitlisoimediato?igsh=MXRxMGZkeWxkZGY1Ng==" class="instagram">Siga no Instagram</a>
+            <a href="https://www.facebook.com/share/1CGCVkDHEs/" class="facebook">Página no Facebook</a>
+        </div>
+    </div>
 
 </body>
 </html>
